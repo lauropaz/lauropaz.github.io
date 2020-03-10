@@ -106,7 +106,7 @@ input, select, textarea {
 		letter-spacing: -0.025em;
 		line-height: 1.75em;
 	}
-
+	
 	a {
 		-moz-transition: border-color 0.2s ease-in-out;
 		-webkit-transition: border-color 0.2s ease-in-out;
@@ -1077,5 +1077,5 @@ input, select, textarea {
 	/* Header */
 
 		#header nav {
-			padding: 0 1em;
+			padding: 1em;
 		} }
