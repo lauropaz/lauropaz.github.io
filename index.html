@@ -14,7 +14,8 @@
     />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/modal.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body class="is-preload">
     <div id="wrapper">
@@ -60,31 +61,36 @@
         <!-- Modal Email-->
         <div id="myModal" class="modal">
           <!-- Modal content -->
-          <div class="modal-content" style="height: 500px; width: 600px; ">
+          <div class="modal-content" style="height: auto; width: auto; ">
             <span class="close">&times;</span>
             <h1 style="color: darkgrey; font-weight:bold; font-size: xx-large;">
               Contato
             </h1>
-            <hr />
+			<hr />
+			<div  id="mensagemErro" style="display: none;">
+				<p id="mensagemErroTxt" style="color: black; background-color: red; "></p><span class="close" id="fechaError">&times;</span></p>
+			</div>
             <form
               action="https://formspree.io/xayjrppk"
               method="POST"
               style="color: black;"
 			>
-			<div>
-				<label for="nome">Nome:</label>
-				<input type="text" id="nome" name="nome" />
-			</div>
-			<div>
-				<label for="email">Email:</label>
-				<input type="text" id="email" name="email" />
-			</div>
-              <div>
-				<label for="message">Mensagem:</label>
-				<textarea id="message" name="message"></textarea>
-			  </div>
-              <!-- your other form fields go here -->
-              <input width="50px" type="submit"  value="Enviar" id="formemail" ></button>
+				<div>			
+					<div>
+						<label for="nome">Nome:</label>
+						<input type="text" id="nome" name="nome" />
+					</div>
+					<div>
+						<label for="email">Email:</label>
+						<input type="text" id="email" name="email" />
+					</div>
+					<div>
+						<label for="message">Mensagem:</label>
+						<textarea id="message" name="message"></textarea>
+					</div>
+					<!-- your other form fields go here -->
+					<input  type="submit"  value="Enviar" id="formemail" ></button>
+				</div>
             </form>
           </div>
         </div>
@@ -109,6 +115,6 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="assets/js/modal.js"></script>
     <script src="assets/js/emailValidator.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
   </body>
 </html>
